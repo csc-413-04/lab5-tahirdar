@@ -7,6 +7,7 @@ class Mail extends Component {
         return (
             <div>
                 <h1>Mail</h1>
+                <h1> Test </h1>
                 <p>
                     Here is content for page2!
                 </p>
