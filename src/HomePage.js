@@ -17,7 +17,15 @@ class HomePage extends Component {
         );
     }
 }
-
+componentDidMount = () => {
+        axios.get('/api/messages')
+        .then((res) => {
+            console.log(res.data)
+            this.props.loadAllMessages(res.data)
+        }).catch((ex) => {
+            console.log(ex);
+        })
+    }
 const mapStateToProps = (state, ownProps) => {
     return {
     };
